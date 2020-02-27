@@ -1,0 +1,81 @@
+<!DOCYTPE html>
+<html ng-app="com">
+        <head>
+                <title>register-int</title>
+
+                <style>
+                  label
+                  {
+                   color:black; 
+                  }
+              </style>
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+                <script src="dem.js"></script>
+                </head>
+                
+<body  style="background:rgb(216, 223, 226)" bgcolor="blue">
+
+    
+                <nav  style="height: 60px" class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                          <div class="navbar-header">
+                            
+                          </div>
+                          <ul class="nav navbar-nav">
+                            <li style="color: white"> <img  style="margin-top: 5px;margin-left: 0px" src="icon.png" ></li>
+                            <li style="color: white;font-size:  25px" class="active"><a href="mainpagee.html"> Home</a></li>
+                            <li style="color: white;font-size: 25px"><a href="internn.html">Companies</a></li>
+                            <div id="l" ></div>
+                          
+                          </ul>
+                          <ul class="nav navbar-nav navbar-right">
+                            <li style="color: white;font-size: 20px"><a href="registerform.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li style="color: white;font-size: 20px"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                          </ul>
+                        </div>
+                      </nav>
+        
+                      <div class="container">
+                          <div class="jumbotron" style="background-color:cadetblue">
+                            <h1>Interner</h1>      
+                            <p>Get nearer to your dream job easier</p>
+                          </div>
+                          <hr class="socket">
+                        </div>
+    <div>
+    <center> <h1>Quick search</h1></center>
+        <div id="com" ng-app="com" ng-controller="ListCtrl">
+         <center>   <p style="color: rgb(12, 12, 22)">`COMPANIES</p></center>
+           <center> <input type="text" id="query" ng-model="query"  placeholder="Quick search"/></center>
+            <center><select ng-model="orderList" >
+               <option value="price">Least</option>
+               <option value="-price">Most</option>
+            </select></center>
+            
+            <div  style="margin-top: 50px" class="container">
+                    <div  class="row">
+                        <div  id=div1 style="border: 2px solid;border-radius:3%" class=col-md-8>
+                            <ul id="coms_ul">
+                <li ng-repeat="coms in com | filter:query | orderBy: orderList">
+                    Name: {{coms.Company | venky}}<br/> More: <a href="{{coms.link}}">Link</a><br/>
+                    <div class="right top">Average income(in Rs): {{coms.price | venky1 }} <br/><br><br><br></div>
+                </li>
+            </ul></div>
+            </div>
+            </div>
+
+            <span>Number of Companies: {{com.length}}</span>
+        </div>
+        </div>
+    </body>
+    
+
+
+
+
+</html>

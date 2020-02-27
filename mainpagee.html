@@ -1,0 +1,146 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="mainpage.css"> 
+    <script src="register.js"></script>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    function name1()
+    {
+    var data="users.json";
+    var i;
+    var obj=JSON.parse(data);
+   var e= find();
+
+   for(i in obj)
+   {
+     if(e == obj[i].email)
+     {
+       var na= '<li>';
+        na += obj[i].name;
+        na += '</li>';
+        $('#l').html(na);
+     }
+      
+   }
+  }
+    </script>
+  
+<title>intern</title>
+</head>
+<body onload="name1()" style="background-image:url(back1.jpg)">
+
+    
+        <nav  style="height: 60px" class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li style="color: white"> <img  style="margin-top: 5px;margin-left: 0px" src="icon.png" ></li>
+                    <li style="color: white;font-size:  25px" class="active"><a href="#"> Home</a></li>
+                    <li style="color: white;font-size: 25px"><a href="internn.html">Companies</a></li>
+                    <li style="color: white;font-size: 25px"><a href="search.html">Quick Search</a></li>
+
+                    <div id="l" ></div>
+                  
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li style="color: white;font-size: 20px"><a href="registerform.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li style="color: white;font-size: 20px"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="container">
+                  <div class="jumbotron" style="background-color:cadetblue">
+                    <h1>Interner</h1>      
+                    <p>Get nearer to your dream job easier</p>
+                  </div>
+                  <hr class="socket">
+                </div>
+                <h1 style="margin-left:42%" class="title">WHAT WE DO?</h1>
+                <br>  
+                <br>
+                <section  style="border: 4px" id="services">
+                  <div  class="container">
+                    <div class="row">
+                      
+                        <div   class=col-md-4>
+                            <img  class="img-circle"   alt="cinque terre" src="s1.jfif">
+                            <h2>Know about companies</h2>
+                            <p>Get a vast knowledge of companies,products produced by them and job demands</p>
+    
+                          </div>
+                          <div class=col-md-4>
+                              <img  class="img-circle"   alt="cinque terre" src="ip.jfif">
+                              <h2>Interview preparation</h2>
+                              <p>Get to know about the rounds conducted and questions asked frequently</p>
+      
+                            </div>
+                            <div class=col-md-4>
+                                <img  class="img-circle"   alt="cinque terre" src="ks.jpg">
+                                <h2>Knowledge Sharing</h2>
+                                <p>Get to know the experience of experienced candidates</p>
+        
+                              </div>
+                    </div>
+                  </div>
+
+<br><br><br>
+<center> <h1 class="title">Why chose us?</h1></center>
+<br>
+
+                  <section id="about_us">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h1>why we're differnt?</h1>
+                          <ul>
+                            
+                              <li>Updated ideas</li>
+                              <li>We create winning content stratergies</li>
+                              <li>we protect your online reputation</li>
+                              <li>Support provided 24/7</li>
+                              
+
+                            
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                          <img  class= "img-circle"src="h1">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+      
+
+<br>
+<br>
+<br>
+
+
+       <!-- Footer -->
+              <footer>
+                <hr class="socket">
+                  <p></p>
+                 <center>   <p style="margin-left: -100px">|  |VENKATESH PRASAD  |  |</p>
+                    <strong style="margin-left: -100px" >Contact info:</strong>
+                    <p style="margin-left: -100px">9080822478<br>venkateshprasad.com</p></center>
+            
+                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.facebook.com/Venkatesh prasad" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/venkatesh.prasad/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                  
+            
+                 
+                  &copy; Interner.
+                
+              </footer>
+  
+</body>
+</html>

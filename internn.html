@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+<title>intern</title>
+
+<script>
+        function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("div1").innerHTML = this.responseText;
+            }
+          };
+          xhttp.open("GET", "microsoft.html", true);
+          xhttp.send();
+        }
+
+
+        function loadDoc2() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("div2").innerHTML =this.responseText;
+    }
+  };
+  xhttp.open("GET", "omicro1.html", true);
+  xhttp.send();
+}
+
+function loadDoc3() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("div3").innerHTML =this.responseText;
+    }
+  };
+  xhttp.open("GET", "am1.html", true);
+  xhttp.send();
+}
+
+function loadDoc4() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("div4").innerHTML =this.responseText;
+    }
+  };
+  xhttp.open("GET", "flip1.html", true);
+  xhttp.send();
+}
+
+function loadDoc5() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("div5").innerHTML =this.responseText;
+    }
+  };
+  xhttp.open("GET", "ibm1.html", true);
+  xhttp.send();
+}
+
+function loadDoc6() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("div6").innerHTML =this.responseText;
+    }
+  };
+  xhttp.open("GET", "apple1.html", true);
+  xhttp.send();
+}
+</script>
+
+</head>
+<body style="background-image: url(back1.jpg)" ng-app="myapp" ng-controller="MyController" >
+
+    <div  id="header" class="contain-to-grid" style="height:176px;border:4px;color:purple">
+  <center><h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"> COMPANIES  </h1></center>
+    </div>
+
+    <div style="margin-top: 50px" class="container">
+        <div class="row">
+    <div  id=div1 onclick="loadDoc()" class=col-md-6>
+        <img  class="img-thumbnail"   alt="cinque terre" src="google.png">
+        
+        </div>
+
+      <div  id=div2 onclick="loadDoc2()" class= col-md-6>
+          <img  class="img-thumbnail"   alt="cinque terre" src="win.png">
+          
+      </div>
+        </div>
+<br><br><br>
+
+        <div class="row">
+          <div  id=div3 onclick="loadDoc3()" class=col-md-6>
+              <img  class="img-thumbnail"   alt="cinque terre" src="al.jpg">
+              
+              </div>
+      
+            <div  id=div4 onclick="loadDoc4()" class= col-md-6>
+                <img  class="img-thumbnail"   alt="cinque terre" src="flip.jpg">
+                
+      
+            </div>
+              </div>
+
+              <br><br><br>
+              <div class="row">
+                <div  id=div5 onclick="loadDoc5()" class=col-md-6>
+                    <img  class="img-thumbnail"   alt="cinque terre" src="ibm.png">
+                    
+                    </div>
+            
+                  <div  id=div6 onclick="loadDoc6()" class= col-md-6>
+                      <img  class="img-thumbnail"   alt="cinque terre" src="apple.jpg">
+                      
+            
+                  </div>
+                    </div>
+        </div>
+        
+       
+
+
+<div style="margin-top: 50px" class="container">
+  <div class="row">
+      <div  id=div1  class=col-md-6>
+  <details name="apple"></details>
+</div>
+</div>
+
+<script>
+    myapp = angular.module("myapp", []);
+    myapp.directive('details', function() {
+        var directive = {};
+
+        directive.restrict = 'E'; /* restrict this directive to elements */
+
+        directive.scope = {
+                details: "=name"
+        }
+
+        directive.compile = function(element, attributes) {
+            
+
+            var linkFunction = function($scope, element, attributes) {
+                element.html(""+$scope.details.info);
+            }
+
+            return linkFunction;
+        }
+
+        return directive;
+    })
+    myapp.controller("MyController", function($scope, $http) {
+        $scope.apple={};
+        $scope.apple.info = "1.Carefully read the job description. 2.Highlight keywords 3.Look over your materials.  4.Ace the interview. Follow up."
+                                                        
+    });
+</script>    
+
+</body>
+
+
+    
+</html>

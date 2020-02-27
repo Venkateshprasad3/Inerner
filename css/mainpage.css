@@ -1,0 +1,24 @@
+#banner
+{
+    color:#fff;
+    padding-top: 5%;
+}
+.title::before{
+    content:"";
+    background:#7b1798;
+    height:5px;
+   
+    
+    transform: translateY(63px);
+    width:250px;
+    display:block;
+}
+
+
+
+p{
+    font-size: 20px;
+}
+li{
+    font-size: 20px;
+}
